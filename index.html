@@ -3,100 +3,257 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="WestForge - developer portfolio and digital product studio.">
-    <title>WestForge - Developer Portfolio</title>
+    <meta name="description" content="WestForge is a one-person developer studio building fast websites, clean interfaces, automation tools, and polished digital products.">
+    <meta name="keywords" content="WestForge, developer portfolio, web developer, frontend developer, one person studio, website development, JavaScript developer, UI developer, automation developer">
+    <meta name="author" content="WestForge">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#050608">
+    <link rel="canonical" href="https://westforge.dev/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://westforge.dev/">
+    <meta property="og:title" content="WestForge - One-person developer studio">
+    <meta property="og:description" content="A solo developer studio building sharp websites, interfaces, automation, and product prototypes.">
+    <meta property="og:image" content="https://westforge.dev/assets/og-image.svg">
+    <meta property="og:site_name" content="WestForge">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WestForge - One-person developer studio">
+    <meta name="twitter:description" content="Fast websites, clean interfaces, automation tools, and polished digital products by a one-person developer team.">
+    <meta name="twitter:image" content="https://westforge.dev/assets/og-image.svg">
+
+    <title>WestForge - One-person developer studio for web, UI, and automation</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://westforge.dev/#website",
+            "url": "https://westforge.dev/",
+            "name": "WestForge",
+            "description": "One-person developer studio for websites, interfaces, automation, and prototypes.",
+            "publisher": { "@id": "https://westforge.dev/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://westforge.dev/#organization",
+            "name": "WestForge",
+            "alternateName": "WestForge Studio",
+            "url": "https://westforge.dev/",
+            "logo": "https://westforge.dev/assets/favicon.svg",
+            "description": "WestForge is a one-person developer studio building fast websites, clean interfaces, automation tools, and product prototypes.",
+            "founder": { "@id": "https://westforge.dev/#founder" },
+            "sameAs": ["https://github.com/wetsik", "https://t.me/pooreshechqa"]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://westforge.dev/#founder",
+            "name": "WestForge",
+            "url": "https://westforge.dev/",
+            "jobTitle": "Independent Web Developer",
+            "worksFor": { "@id": "https://westforge.dev/#organization" },
+            "knowsAbout": ["Frontend development", "JavaScript", "UI design", "Automation", "Web performance", "Nginx", "API integration"],
+            "sameAs": ["https://github.com/wetsik", "https://t.me/pooreshechqa"]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <canvas id="forgeCanvas" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="WestForge home">
-        <span class="brand-mark">W</span>
+        <span class="brand-mark">WF</span>
         <span>WestForge</span>
       </a>
       <nav class="nav" aria-label="Main navigation">
+        <a href="#studio">Studio</a>
         <a href="#work">Work</a>
         <a href="#stack">Stack</a>
         <a href="#contact">Contact</a>
       </nav>
+      <a class="header-cta" href="#contact">Book a build</a>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Independent developer / product builder</p>
-          <h1>Building sharp web products with clean code and motion.</h1>
+          <p class="eyebrow">One-person developer studio</p>
+          <h1>WestForge builds web products with the focus of one mind and the output of a full team.</h1>
           <p class="hero-text">
-            WestForge creates fast interfaces, landing pages, tools, dashboards, and mobile-ready web apps
-            with a focus on detail, performance, and polished user experience.
+            I design and ship fast websites, refined interfaces, automation systems, and product prototypes.
+            Strategy, design, frontend, backend glue, deployment: one accountable builder from idea to launch.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#contact">Start a project</a>
-            <a class="button ghost" href="#work">View work</a>
+            <a class="button ghost" href="#work">Explore the forge</a>
+          </div>
+          <div class="trust-row" aria-label="Capabilities">
+            <span>Websites</span>
+            <span>Dashboards</span>
+            <span>Automation</span>
+            <span>Deployments</span>
           </div>
         </div>
 
-        <aside class="signal-card reveal" aria-label="Developer status">
+        <aside class="console-panel reveal" aria-label="WestForge build console">
           <div class="terminal-bar">
             <span></span>
             <span></span>
             <span></span>
+            <strong>forge.pipeline</strong>
           </div>
-          <pre><code>westforge.init({
-  mode: "production",
-  focus: ["web", "ui", "automation"],
-  status: "available"
+          <div class="console-grid">
+            <div>
+              <small>Mode</small>
+              <strong>solo team</strong>
+            </div>
+            <div>
+              <small>Latency</small>
+              <strong>fast</strong>
+            </div>
+            <div>
+              <small>Output</small>
+              <strong>production</strong>
+            </div>
+          </div>
+          <pre><code>const westforge = build({
+  research: true,
+  interface: "polished",
+  motion: "subtle",
+  deploy: "nginx + https"
 });</code></pre>
+          <div class="pulse-track"><span></span></div>
         </aside>
       </section>
 
-      <section class="section metrics reveal" aria-label="Highlights">
+      <section class="section metrics reveal" aria-label="WestForge highlights">
         <div>
-          <strong>01</strong>
-          <span>Frontend systems</span>
+          <strong>1</strong>
+          <span>person, no handoff chaos</span>
         </div>
         <div>
-          <strong>02</strong>
-          <span>Responsive interfaces</span>
+          <strong>24/7</strong>
+          <span>web presence with HTTPS</span>
         </div>
         <div>
-          <strong>03</strong>
-          <span>Automation and APIs</span>
+          <strong>0</strong>
+          <span>template-looking pages</span>
+        </div>
+      </section>
+
+      <section class="section studio" id="studio">
+        <div class="section-heading reveal">
+          <p class="eyebrow">The studio</p>
+          <h2>A team of one, built for clarity.</h2>
+          <p>
+            WestForge is intentionally small. There is no account manager, no slow relay chain, and no design lost
+            between departments. The same person who understands the problem writes the code and cares about the last pixel.
+          </p>
+        </div>
+        <div class="studio-grid">
+          <article class="studio-card reveal">
+            <span>01</span>
+            <h3>Product thinking</h3>
+            <p>Before code, I shape the user flow, content hierarchy, and the fastest useful version of the product.</p>
+          </article>
+          <article class="studio-card reveal">
+            <span>02</span>
+            <h3>Interface craft</h3>
+            <p>Clean layout, responsive behavior, motion, hover states, and details that make a site feel alive.</p>
+          </article>
+          <article class="studio-card reveal">
+            <span>03</span>
+            <h3>Launch ownership</h3>
+            <p>Domains, HTTPS, Nginx, GitHub, deploy flow, performance checks, and the practical parts after design.</p>
+          </article>
         </div>
       </section>
 
       <section class="section" id="work">
         <div class="section-heading reveal">
-          <p class="eyebrow">Selected work</p>
-          <h2>Interfaces that feel precise, fast, and alive.</h2>
+          <p class="eyebrow">Selected systems</p>
+          <h2>Not just pages. Small, sharp machines for the web.</h2>
         </div>
         <div class="work-grid">
           <article class="project reveal">
-            <span>Web app</span>
-            <h3>Client dashboard</h3>
-            <p>Dense operational UI with charts, filters, user flows, and crisp responsive behavior.</p>
+            <div class="project-top">
+              <span>Portfolio</span>
+              <b>01</b>
+            </div>
+            <h3>Developer identity site</h3>
+            <p>Dark visual system, canvas motion, SEO structure, GitHub workflow, and VPS-ready deployment.</p>
           </article>
           <article class="project reveal">
-            <span>Landing page</span>
-            <h3>Product launch</h3>
-            <p>High-conversion product page with scroll motion, visual hierarchy, and fast loading.</p>
+            <div class="project-top">
+              <span>Web app</span>
+              <b>02</b>
+            </div>
+            <h3>Operational dashboard</h3>
+            <p>Dense data screens with readable hierarchy, filters, panels, and repeat-use UI patterns.</p>
           </article>
           <article class="project reveal">
-            <span>Automation</span>
-            <h3>Workflow tools</h3>
-            <p>Small internal tools that connect APIs, remove repetitive work, and save team time.</p>
+            <div class="project-top">
+              <span>Automation</span>
+              <b>03</b>
+            </div>
+            <h3>API workflow tool</h3>
+            <p>Small internal tools that connect services, remove repetitive work, and reduce manual mistakes.</p>
+          </article>
+          <article class="project wide reveal">
+            <div class="project-top">
+              <span>Launch</span>
+              <b>04</b>
+            </div>
+            <h3>From blank server to live brand</h3>
+            <p>
+              Domain, SSL, server setup, static deployment, repository structure, and a website that can grow
+              from a single page into a complete product presence.
+            </p>
           </article>
         </div>
+      </section>
+
+      <section class="section process">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Process</p>
+          <h2>How the forge works.</h2>
+        </div>
+        <ol class="timeline">
+          <li class="reveal">
+            <span>Discover</span>
+            <p>Clarify the goal, audience, references, must-haves, and what should feel premium.</p>
+          </li>
+          <li class="reveal">
+            <span>Shape</span>
+            <p>Turn rough ideas into structure: sections, flows, components, interactions, and launch scope.</p>
+          </li>
+          <li class="reveal">
+            <span>Build</span>
+            <p>Write the interface, wire behavior, tune responsive states, and polish animation.</p>
+          </li>
+          <li class="reveal">
+            <span>Ship</span>
+            <p>Deploy to the server, connect the domain, set up HTTPS, and leave the project maintainable.</p>
+          </li>
+        </ol>
       </section>
 
       <section class="section stack-section" id="stack">
         <div class="section-heading reveal">
           <p class="eyebrow">Stack</p>
-          <h2>Modern tools, practical decisions.</h2>
+          <h2>Practical tools for real launches.</h2>
         </div>
         <div class="stack reveal">
           <span>HTML</span>
@@ -105,18 +262,34 @@
           <span>React</span>
           <span>Node.js</span>
           <span>REST APIs</span>
-          <span>Git</span>
+          <span>GitHub</span>
           <span>Nginx</span>
+          <span>Linux VPS</span>
+          <span>SEO basics</span>
+          <span>Performance</span>
+          <span>Responsive UI</span>
         </div>
       </section>
 
       <section class="contact section reveal" id="contact">
-        <p class="eyebrow">Contact</p>
-        <h2>Have an idea? Let's forge it into a real product.</h2>
-        <p>Replace this line with your Telegram, email, or contact form when you are ready.</p>
-        <a class="button primary" href="mailto:hello@westforge.dev">hello@westforge.dev</a>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Have an idea? Send it to the forge.</h2>
+          <p>
+            Tell me what you want to build: website, portfolio, dashboard, automation, or a prototype.
+            I will help turn the messy version into something sharp and launchable.
+          </p>
+        </div>
+        <a class="button primary" href="https://t.me/pooreshechqa">Telegram @pooreshechqa</a>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <span>WestForge</span>
+      <span>One-person developer studio</span>
+      <a href="https://github.com/wetsik" rel="me">GitHub</a>
+      <a href="https://t.me/pooreshechqa" rel="me">Telegram</a>
+    </footer>
 
     <script src="script.js"></script>
   </body>

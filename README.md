@@ -12,3 +12,9 @@ sudo systemctl reload nginx
 ```
 
 If uploading from Windows, copy the contents of this folder to `/var/www/html/` on the server.
+
+After deploy, submit the sitemap in Google Search Console:
+
+```txt
+https://westforge.dev/sitemap.xml
+```

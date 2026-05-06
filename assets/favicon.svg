@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="WestForge logo">
+  <rect width="128" height="128" rx="28" fill="#050608"/>
+  <path d="M24 34h15l8 40 11-40h13l11 40 8-40h15L91 94H77L64 52 51 94H37L24 34Z" fill="#f7f8fb"/>
+  <path d="M28 104h72" stroke="#67e8f9" stroke-width="6" stroke-linecap="round"/>
+</svg>

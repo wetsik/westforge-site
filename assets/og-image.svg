@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="WestForge one-person developer studio">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#050608"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="cyan" cx="80%" cy="15%" r="45%">
+      <stop stop-color="#67e8f9" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#67e8f9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violet" cx="15%" cy="80%" r="48%">
+      <stop stop-color="#a78bfa" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#cyan)"/>
+  <rect width="1200" height="630" fill="url(#violet)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".09">
+    <path d="M0 120h1200M0 240h1200M0 360h1200M0 480h1200"/>
+    <path d="M160 0v630M320 0v630M480 0v630M640 0v630M800 0v630M960 0v630"/>
+  </g>
+  <rect x="82" y="76" width="96" height="96" rx="22" fill="#050608" stroke="#ffffff" stroke-opacity=".18"/>
+  <text x="130" y="138" fill="#f7f8fb" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900" text-anchor="middle">WF</text>
+  <text x="82" y="255" fill="#67e8f9" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="4">ONE-PERSON DEVELOPER STUDIO</text>
+  <text x="82" y="355" fill="#f7f8fb" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="900">WestForge</text>
+  <text x="82" y="438" fill="#dbeafe" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700">Websites, interfaces, automation, launches.</text>
+  <text x="82" y="520" fill="#a5afbf" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600">westforge.dev</text>
+</svg>
