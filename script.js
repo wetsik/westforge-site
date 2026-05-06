@@ -1,10 +1,12 @@
 const canvas = document.querySelector("#forgeCanvas");
 const ctx = canvas.getContext("2d");
 const reveals = document.querySelectorAll(".reveal");
+const tiltItems = document.querySelectorAll(".tilt");
+const magneticItems = document.querySelectorAll(".magnetic");
 
 let width = 0;
 let height = 0;
-let points = [];
+let waves = [];
 let pointer = { x: 0, y: 0, active: false };
 
 function resize() {
@@ -17,63 +19,42 @@ function resize() {
   canvas.style.height = `${height}px`;
   ctx.setTransform(scale, 0, 0, scale, 0, 0);
 
-  const count = Math.max(36, Math.floor((width * height) / 26000));
-  points = Array.from({ length: count }, () => ({
-    x: Math.random() * width,
-    y: Math.random() * height,
-    vx: (Math.random() - 0.5) * 0.35,
-    vy: (Math.random() - 0.5) * 0.35,
+  waves = Array.from({ length: 42 }, (_, index) => ({
+    x: (index / 41) * width,
+    offset: Math.random() * Math.PI * 2,
+    speed: 0.003 + Math.random() * 0.003,
+    amp: 20 + Math.random() * 42,
   }));
 }
 
-function draw() {
+function draw(time) {
   ctx.clearRect(0, 0, width, height);
-  ctx.fillStyle = "#050608";
+
+  const gradient = ctx.createLinearGradient(0, 0, width, height);
+  gradient.addColorStop(0, "rgba(255,255,255,0.0)");
+  gradient.addColorStop(0.45, "rgba(0,113,227,0.10)");
+  gradient.addColorStop(1, "rgba(124,58,237,0.08)");
+  ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, width, height);
 
-  for (const point of points) {
-    point.x += point.vx;
-    point.y += point.vy;
-
-    if (point.x < -20) point.x = width + 20;
-    if (point.x > width + 20) point.x = -20;
-    if (point.y < -20) point.y = height + 20;
-    if (point.y > height + 20) point.y = -20;
-
-    if (pointer.active) {
-      const dx = point.x - pointer.x;
-      const dy = point.y - pointer.y;
-      const distance = Math.hypot(dx, dy);
-
-      if (distance < 150) {
-        point.x += dx * 0.002;
-        point.y += dy * 0.002;
-      }
-    }
-  }
-
-  for (let i = 0; i < points.length; i += 1) {
-    for (let j = i + 1; j < points.length; j += 1) {
-      const a = points[i];
-      const b = points[j];
-      const distance = Math.hypot(a.x - b.x, a.y - b.y);
-
-      if (distance < 150) {
-        ctx.strokeStyle = `rgba(103, 232, 249, ${0.16 * (1 - distance / 150)})`;
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.stroke();
-      }
-    }
-  }
-
-  for (const point of points) {
-    ctx.fillStyle = "rgba(255,255,255,0.72)";
+  ctx.lineWidth = 1;
+  for (let row = 0; row < 6; row += 1) {
     ctx.beginPath();
-    ctx.arc(point.x, point.y, 1.4, 0, Math.PI * 2);
-    ctx.fill();
+    for (let i = 0; i < waves.length; i += 1) {
+      const wave = waves[i];
+      const y = height * (0.2 + row * 0.13)
+        + Math.sin(time * wave.speed + wave.offset + row) * wave.amp;
+      const pull = pointer.active ? Math.max(0, 1 - Math.hypot(wave.x - pointer.x, y - pointer.y) / 260) : 0;
+      const finalY = y - pull * 34;
+
+      if (i === 0) {
+        ctx.moveTo(wave.x, finalY);
+      } else {
+        ctx.lineTo(wave.x, finalY);
+      }
+    }
+    ctx.strokeStyle = `rgba(17,17,20,${0.028 + row * 0.004})`;
+    ctx.stroke();
   }
 
   requestAnimationFrame(draw);
@@ -85,10 +66,36 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add("visible");
     }
   }
-}, { threshold: 0.18 });
+}, { threshold: 0.16 });
 
 for (const element of reveals) {
   observer.observe(element);
+}
+
+for (const item of tiltItems) {
+  item.addEventListener("pointermove", (event) => {
+    const rect = item.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    item.style.transform = `rotateX(${y * -5}deg) rotateY(${x * 7}deg) translateY(-3px)`;
+  });
+
+  item.addEventListener("pointerleave", () => {
+    item.style.transform = "";
+  });
+}
+
+for (const item of magneticItems) {
+  item.addEventListener("pointermove", (event) => {
+    const rect = item.getBoundingClientRect();
+    const x = (event.clientX - rect.left - rect.width / 2) * 0.12;
+    const y = (event.clientY - rect.top - rect.height / 2) * 0.12;
+    item.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+  item.addEventListener("pointerleave", () => {
+    item.style.transform = "";
+  });
 }
 
 window.addEventListener("resize", resize);
@@ -100,4 +107,4 @@ window.addEventListener("pointerleave", () => {
 });
 
 resize();
-draw();
+draw(0);
