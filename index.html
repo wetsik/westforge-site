@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WestForge - developer portfolio and digital product studio.">
+    <title>WestForge - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="forgeCanvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="WestForge home">
+        <span class="brand-mark">W</span>
+        <span>WestForge</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Independent developer / product builder</p>
+          <h1>Building sharp web products with clean code and motion.</h1>
+          <p class="hero-text">
+            WestForge creates fast interfaces, landing pages, tools, dashboards, and mobile-ready web apps
+            with a focus on detail, performance, and polished user experience.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Start a project</a>
+            <a class="button ghost" href="#work">View work</a>
+          </div>
+        </div>
+
+        <aside class="signal-card reveal" aria-label="Developer status">
+          <div class="terminal-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <pre><code>westforge.init({
+  mode: "production",
+  focus: ["web", "ui", "automation"],
+  status: "available"
+});</code></pre>
+        </aside>
+      </section>
+
+      <section class="section metrics reveal" aria-label="Highlights">
+        <div>
+          <strong>01</strong>
+          <span>Frontend systems</span>
+        </div>
+        <div>
+          <strong>02</strong>
+          <span>Responsive interfaces</span>
+        </div>
+        <div>
+          <strong>03</strong>
+          <span>Automation and APIs</span>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Interfaces that feel precise, fast, and alive.</h2>
+        </div>
+        <div class="work-grid">
+          <article class="project reveal">
+            <span>Web app</span>
+            <h3>Client dashboard</h3>
+            <p>Dense operational UI with charts, filters, user flows, and crisp responsive behavior.</p>
+          </article>
+          <article class="project reveal">
+            <span>Landing page</span>
+            <h3>Product launch</h3>
+            <p>High-conversion product page with scroll motion, visual hierarchy, and fast loading.</p>
+          </article>
+          <article class="project reveal">
+            <span>Automation</span>
+            <h3>Workflow tools</h3>
+            <p>Small internal tools that connect APIs, remove repetitive work, and save team time.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section stack-section" id="stack">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Stack</p>
+          <h2>Modern tools, practical decisions.</h2>
+        </div>
+        <div class="stack reveal">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Node.js</span>
+          <span>REST APIs</span>
+          <span>Git</span>
+          <span>Nginx</span>
+        </div>
+      </section>
+
+      <section class="contact section reveal" id="contact">
+        <p class="eyebrow">Contact</p>
+        <h2>Have an idea? Let's forge it into a real product.</h2>
+        <p>Replace this line with your Telegram, email, or contact form when you are ready.</p>
+        <a class="button primary" href="mailto:hello@westforge.dev">hello@westforge.dev</a>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
