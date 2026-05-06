@@ -3,32 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="WestForge is a one-person developer studio building premium websites, polished interfaces, automation tools, and product prototypes.">
-    <meta name="keywords" content="WestForge, developer portfolio, web developer, frontend developer, one person studio, website development, JavaScript developer, UI developer, automation developer">
+    <meta name="description" content="WestForge is a one-person full-stack developer studio building encrypted, secure, high-performance web products with React, TypeScript, backend APIs, and deployment systems.">
+    <meta name="keywords" content="WestForge, full-stack developer, React developer, TypeScript developer, backend developer, encrypted contact form, secure web app, developer portfolio, one person studio">
     <meta name="author" content="WestForge">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="theme-color" content="#f5f5f7">
+    <meta name="theme-color" content="#030305">
     <link rel="canonical" href="https://westforge.dev/">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://westforge.dev/">
-    <meta property="og:title" content="WestForge - One-person developer studio">
-    <meta property="og:description" content="Premium web interfaces, automation, and product prototypes by a one-person developer studio.">
+    <meta property="og:title" content="WestForge - Full-stack one-person developer studio">
+    <meta property="og:description" content="Secure React + TypeScript interfaces, encrypted backend intake, automation, and deployment systems by a one-person developer studio.">
     <meta property="og:image" content="https://westforge.dev/assets/og-image.svg">
     <meta property="og:site_name" content="WestForge">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WestForge - One-person developer studio">
-    <meta name="twitter:description" content="Premium web interfaces, automation, and product prototypes by a one-person developer studio.">
+    <meta name="twitter:title" content="WestForge - Full-stack one-person developer studio">
+    <meta name="twitter:description" content="React, TypeScript, backend APIs, encryption, automation, and production deployments.">
     <meta name="twitter:image" content="https://westforge.dev/assets/og-image.svg">
 
-    <title>WestForge - Premium one-person developer studio</title>
+    <title>WestForge - Secure full-stack developer studio</title>
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
 
     <script type="application/ld+json">
       {
@@ -39,7 +38,7 @@
             "@id": "https://westforge.dev/#website",
             "url": "https://westforge.dev/",
             "name": "WestForge",
-            "description": "Premium one-person developer studio for websites, interfaces, automation, and product prototypes.",
+            "description": "Secure one-person full-stack developer studio for React, TypeScript, backend APIs, automation, and deployment systems.",
             "publisher": { "@id": "https://westforge.dev/#organization" },
             "inLanguage": "en"
           },
@@ -50,7 +49,7 @@
             "alternateName": "WestForge Studio",
             "url": "https://westforge.dev/",
             "logo": "https://westforge.dev/assets/favicon.svg",
-            "description": "WestForge is a one-person developer studio building premium websites, polished interfaces, automation tools, and product prototypes.",
+            "description": "WestForge is a one-person full-stack developer studio building secure React and TypeScript products with backend APIs, encryption, and deployment systems.",
             "founder": { "@id": "https://westforge.dev/#founder" },
             "sameAs": ["https://github.com/wetsik", "https://t.me/pooreshechqa"]
           },
@@ -59,9 +58,9 @@
             "@id": "https://westforge.dev/#founder",
             "name": "WestForge",
             "url": "https://westforge.dev/",
-            "jobTitle": "Independent Web Developer",
+            "jobTitle": "Full-stack Developer",
             "worksFor": { "@id": "https://westforge.dev/#organization" },
-            "knowsAbout": ["Frontend development", "JavaScript", "UI design", "Automation", "Web performance", "Nginx", "API integration"],
+            "knowsAbout": ["React", "TypeScript", "Node.js", "Express", "Encryption", "Security headers", "Web performance", "Nginx", "API integration"],
             "sameAs": ["https://github.com/wetsik", "https://t.me/pooreshechqa"]
           }
         ]
@@ -69,198 +68,7 @@
     </script>
   </head>
   <body>
-    <canvas id="forgeCanvas" aria-hidden="true"></canvas>
-    <div class="ambient-field" aria-hidden="true"></div>
-
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="WestForge home">
-        <span class="brand-mark">W</span>
-        <span>WestForge</span>
-      </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#studio">Studio</a>
-        <a href="#principles">Principles</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="header-cta magnetic" href="https://t.me/pooreshechqa">Telegram</a>
-    </header>
-
-    <main id="top">
-      <section class="hero">
-        <div class="hero-inner">
-          <p class="eyebrow reveal">One person. Full stack. Zero handoff.</p>
-          <h1 class="reveal">WestForge</h1>
-          <p class="hero-statement reveal">
-            A one-person developer studio crafting premium websites, precise interfaces, automation, and launch-ready product systems.
-          </p>
-          <div class="hero-actions reveal">
-            <a class="button primary magnetic" href="https://t.me/pooreshechqa">Start with Telegram</a>
-            <a class="button secondary magnetic" href="#work">See the system</a>
-          </div>
-        </div>
-
-        <div class="hero-stage reveal" aria-label="Animated WestForge interface preview">
-          <div class="device-shell tilt">
-            <div class="device-top">
-              <span></span>
-              <span></span>
-              <span></span>
-              <b>westforge.dev</b>
-            </div>
-            <div class="device-screen">
-              <div class="signal-line">
-                <span>Design</span>
-                <strong>98%</strong>
-              </div>
-              <div class="signal-line">
-                <span>Frontend</span>
-                <strong>100%</strong>
-              </div>
-              <div class="signal-line">
-                <span>Deploy</span>
-                <strong>live</strong>
-              </div>
-              <div class="code-surface">
-                <span>build.motion()</span>
-                <span>ship.fast()</span>
-                <span>polish.details()</span>
-              </div>
-            </div>
-          </div>
-          <div class="floating-chip chip-one">solo studio</div>
-          <div class="floating-chip chip-two">premium UI</div>
-          <div class="floating-chip chip-three">SEO ready</div>
-        </div>
-      </section>
-
-      <section class="marquee" aria-label="WestForge capabilities">
-        <div class="marquee-track">
-          <span>Websites</span>
-          <span>Interfaces</span>
-          <span>Automation</span>
-          <span>Dashboards</span>
-          <span>Launch systems</span>
-          <span>SEO foundations</span>
-          <span>Websites</span>
-          <span>Interfaces</span>
-          <span>Automation</span>
-          <span>Dashboards</span>
-          <span>Launch systems</span>
-          <span>SEO foundations</span>
-        </div>
-      </section>
-
-      <section class="section studio" id="studio">
-        <div class="section-copy reveal">
-          <p class="eyebrow">The studio</p>
-          <h2>Small on purpose. Serious by design.</h2>
-          <p>
-            WestForge is a team of one: the same person plans the flow, designs the interface, writes the code,
-            tunes the motion, and ships the site. No middle layer. No diluted taste. Just direct execution.
-          </p>
-        </div>
-        <div class="studio-layout">
-          <article class="feature-panel reveal tilt">
-            <span>01</span>
-            <h3>Strategy that becomes code</h3>
-            <p>Every section has a job: explain, prove, convert, or guide. Nothing is added because it merely looks busy.</p>
-          </article>
-          <article class="feature-panel reveal tilt">
-            <span>02</span>
-            <h3>Motion with restraint</h3>
-            <p>Animations support hierarchy and interaction. They feel expensive because they know when to stop.</p>
-          </article>
-          <article class="feature-panel reveal tilt">
-            <span>03</span>
-            <h3>Launch ownership</h3>
-            <p>GitHub, VPS, Nginx, HTTPS, SEO files, and clean static delivery are treated as part of the product.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section principles" id="principles">
-        <div class="section-copy reveal">
-          <p class="eyebrow">Design rules</p>
-          <h2>Built with product-grade rules, not random decoration.</h2>
-        </div>
-        <div class="rules-grid">
-          <div class="rule reveal"><b>01</b><span>Strong first-viewport brand signal</span></div>
-          <div class="rule reveal"><b>02</b><span>Clear hierarchy before visual effects</span></div>
-          <div class="rule reveal"><b>03</b><span>Motion that follows user attention</span></div>
-          <div class="rule reveal"><b>04</b><span>Responsive layout with no text collisions</span></div>
-          <div class="rule reveal"><b>05</b><span>SEO structure baked into the HTML</span></div>
-          <div class="rule reveal"><b>06</b><span>Deployable without fragile build steps</span></div>
-        </div>
-      </section>
-
-      <section class="section work" id="work">
-        <div class="section-copy reveal">
-          <p class="eyebrow">Work modes</p>
-          <h2>What WestForge can ship.</h2>
-        </div>
-        <div class="showcase">
-          <article class="showcase-item reveal">
-            <div>
-              <span>Website</span>
-              <h3>Premium portfolio or company site</h3>
-            </div>
-            <p>Brand-first landing pages with motion, responsive polish, SEO metadata, and deployment guidance.</p>
-          </article>
-          <article class="showcase-item reveal">
-            <div>
-              <span>Interface</span>
-              <h3>Dashboard or product UI</h3>
-            </div>
-            <p>Dense, usable screens for tools, admin panels, client portals, and repeat workflows.</p>
-          </article>
-          <article class="showcase-item reveal">
-            <div>
-              <span>Automation</span>
-              <h3>Small systems that save time</h3>
-            </div>
-            <p>Scripts, API connectors, deploy helpers, and internal tools that remove manual work.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section stack-section" id="stack">
-        <div class="section-copy reveal">
-          <p class="eyebrow">Stack</p>
-          <h2>Simple tools. Clean execution.</h2>
-        </div>
-        <div class="stack reveal">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>React</span>
-          <span>Node.js</span>
-          <span>APIs</span>
-          <span>GitHub</span>
-          <span>Nginx</span>
-          <span>VPS</span>
-          <span>SEO</span>
-        </div>
-      </section>
-
-      <section class="contact section reveal" id="contact">
-        <p class="eyebrow">Contact</p>
-        <h2>Bring the rough idea. Leave with something sharp.</h2>
-        <p>
-          Message me on Telegram with what you want to build. WestForge is ready for websites, interfaces,
-          prototypes, and automation.
-        </p>
-        <a class="button primary magnetic" href="https://t.me/pooreshechqa">Telegram @pooreshechqa</a>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>WestForge</span>
-      <span>One-person developer studio</span>
-      <a href="https://github.com/wetsik" rel="me">GitHub</a>
-      <a href="https://t.me/pooreshechqa" rel="me">Telegram</a>
-    </footer>
-
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
