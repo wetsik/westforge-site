@@ -36,6 +36,8 @@ NODE_ENV=production
 PORT=4174
 PUBLIC_ORIGIN=https://westforge.dev
 CONTACT_ENCRYPTION_KEY=PASTE_BASE64_32_BYTE_KEY
+ADMIN_USERNAME=codex
+ADMIN_PASSWORD=password
 ```
 
 Generate the encryption key:
@@ -65,4 +67,10 @@ Submit sitemap in Google Search Console:
 
 ```txt
 https://westforge.dev/sitemap.xml
+```
+
+Admin panel:
+
+```txt
+https://westforge.dev/admin
 ```
