@@ -11,6 +11,7 @@ Full-stack developer portfolio for `westforge.dev`.
 - Helmet security headers
 - Rate limiting
 - AES-256-GCM encrypted contact intake
+- Persistent admin accounts with cookie sessions
 - Static SEO files: `robots.txt`, `sitemap.xml`, manifest, Open Graph image
 
 ## Local development
@@ -35,9 +36,10 @@ Create `.env`:
 NODE_ENV=production
 PORT=4174
 PUBLIC_ORIGIN=https://westforge.dev
+ADMIN_SESSION_SECRET=PASTE_RANDOM_SECRET
 CONTACT_ENCRYPTION_KEY=PASTE_BASE64_32_BYTE_KEY
 ADMIN_USERNAME=codex
-ADMIN_PASSWORD=password
+ADMIN_PASSWORD=westforge-dev-admin
 ```
 
 Generate the encryption key:
@@ -72,5 +74,12 @@ https://westforge.dev/sitemap.xml
 Admin panel:
 
 ```txt
-https://westforge.dev/admin
+https://westforge.dev/admin/login
+```
+
+Admin routes:
+
+```txt
+/admin/login
+/admin/dashboard
 ```

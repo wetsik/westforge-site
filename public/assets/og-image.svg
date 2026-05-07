@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="WestForge one-person developer studio">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="WestForge premium web development by an independent developer">
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop stop-color="#050608"/>
@@ -21,9 +21,9 @@
     <path d="M160 0v630M320 0v630M480 0v630M640 0v630M800 0v630M960 0v630"/>
   </g>
   <rect x="82" y="76" width="96" height="96" rx="22" fill="#050608" stroke="#ffffff" stroke-opacity=".18"/>
-  <text x="130" y="138" fill="#f7f8fb" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="900" text-anchor="middle">WF</text>
-  <text x="82" y="255" fill="#67e8f9" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="4">ONE-PERSON DEVELOPER STUDIO</text>
-  <text x="82" y="355" fill="#f7f8fb" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="900">WestForge</text>
-  <text x="82" y="438" fill="#dbeafe" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700">Websites, interfaces, automation, launches.</text>
-  <text x="82" y="520" fill="#a5afbf" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600">westforge.dev</text>
+  <text x="130" y="138" fill="#f7f8fb" font-family="Manrope, Arial, sans-serif" font-size="32" font-weight="900" text-anchor="middle">WF</text>
+  <text x="82" y="255" fill="#67e8f9" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="4">PREMIUM WEB DEVELOPMENT</text>
+  <text x="82" y="355" fill="#f7f8fb" font-family="Manrope, Arial, sans-serif" font-size="78" font-weight="900">WestForge</text>
+  <text x="82" y="438" fill="#dbeafe" font-family="Manrope, Arial, sans-serif" font-size="44" font-weight="700">Modern websites, fullstack apps, admin dashboards.</text>
+  <text x="82" y="520" fill="#a5afbf" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="600">westforge.dev</text>
 </svg>
